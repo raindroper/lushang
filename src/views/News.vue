@@ -276,7 +276,7 @@ export default {
         background: #fff;
         margin: 10px;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
 
         p {

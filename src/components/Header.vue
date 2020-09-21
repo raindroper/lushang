@@ -28,7 +28,7 @@
         <div class="menu-item">
           <a href="/">首 页</a>
           <div class="menu_close-btn" @click="closeNav()" style="cursor: pointer;">
-            <img src="../assets/close.png" alt="" srcset="" width="20px"/>
+            <img src="../assets/close.png" alt="" srcset="" width="15px"/>
           </div>
         </div>
         <div class="menu-item">
@@ -149,9 +149,10 @@ export default {
         text-align: left;
 
         .menu-item {
-          padding: 20px 20px;
+          padding: 0 20px;
           border-bottom: 1px solid #1d1d1d;
           position: relative;
+          height: 60px;
           .menu_close-btn {
             position: absolute;
             right: 20px;
@@ -159,9 +160,13 @@ export default {
             transform: translateY(-50%);
           }
           a {
+            line-height: 60px;
             font-size: 16px;
             text-decoration: none;
             color: #fff;
+            display: inline-block;
+            width: 80%;
+            height: 100%;
           }
         }
 
