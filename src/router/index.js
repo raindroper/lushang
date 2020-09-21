@@ -8,15 +8,26 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: { title: '首页 - 鲁商大会' }
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/news',
+    name: 'News',
+    meta: { title: '新闻中心 - 鲁商大会' },
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/News.vue')
+  },
+  {
+    path: '/meeting',
+    name: 'Meeting',
+    meta: { title: '走进大会 - 鲁商大会' },
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/Meeting.vue')
   }
 ]
 
