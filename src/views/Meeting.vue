@@ -154,7 +154,7 @@ export default {
         height: 300px;
         img {
           width: 100%;
-          /*height: 206px;*/
+          height: 175px;
         }
         .item-desc {
           height: 100px;
@@ -164,6 +164,22 @@ export default {
           background-color: #ffffff;
           letter-spacing: 2px;
           font-weight: bold;
+        }
+        @media screen and (max-width: 768px) {
+          width: 50%;
+          height: 200px;
+          .item-desc {
+            height: 50px;
+            line-height: 30px;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          img {
+            width: 100%;
+            height: 135px;
+          }
         }
       }
     }
