@@ -5,7 +5,7 @@ import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
-import {vueAccordion} from 'vue-accordion'
+// import {vueAccordion} from 'vue-accordion'
 // Vue.component('vue-accordion', vueAccordion)
 
 Vue.use(ElementUI);

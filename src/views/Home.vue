@@ -133,7 +133,7 @@ export default {
   },
   mounted () {
     if (!this.isMobile) {
-      this.bannerImg = require('../assets/banner.png')
+      this.bannerImg = require('../assets/pc_banner.jpg')
       this.guestData = [
         {
           info: [
@@ -214,14 +214,17 @@ export default {
 
       h1 {
         color: #ffffff;
+        font-weight: bold !important;
+        font-size: 21px !important;
       }
 
       .sub-title {
+        font-weight: bold !important;
         background-image: -webkit-linear-gradient(left,
         #f68100,
         #ca3372,
         #0089e1);
-        font-size: 30px;
+        font-size: 16px !important;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -239,7 +242,7 @@ export default {
     }
 
     .section-1300 {
-      max-width: 1300px;
+      max-width: 1200px;
       margin-left: auto;
       margin-right: auto;
       margin-top: 40px;
@@ -267,6 +270,7 @@ export default {
 
         .person-item {
           width: calc(20% - 20px);
+          max-width: 1200px;
           @media screen and (max-width: 768px) {
             width: calc(50% - 20px);
           }
@@ -279,17 +283,20 @@ export default {
 
     .carousel-item {
       height: 228px;
+
       .carousel-footer {
         height: 30px;
         background-color: #ffffff;
         line-height: 30px;
         padding: 0 15px;
         box-sizing: border-box;
+
         .footer-index {
           font-size: 14px;
           color: #3F4041;
           margin-right: 6px;
         }
+
         .footer-title {
           font-size: 12px;
           color: #1A1C1F;

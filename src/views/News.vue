@@ -10,30 +10,7 @@
       <a target="_blank"
          href="http://www.wanyudc.com/action/fzimdc/index.php/ShareImgIndex/ShareImg/index/space_sign/wyzw3d37b11c-8eb4-fe66-02bf-a6b1a20895a1"
          class="img-warp">
-        <div class="img-item" style="width:30%;height:100%">
-          <el-image :src="url" :fit="fit"></el-image>
-        </div>
-        <div style="width:calc(70% - 20px);height:100%">
-          <div style="height:55%" class="sub-img-wap">
-            <div class="img-item" style="width:calc(50% - 10px)">
-              <el-image :src="url" :fit="fit"></el-image>
-            </div>
-            <div class="img-item" style="width:calc(50% - 10px)">
-              <el-image :src="url" :fit="fit"></el-image>
-            </div>
-          </div>
-          <div style="height:40%;margin-top:20px" class="sub-img-wap">
-            <div class="img-item" style="width:calc(33.3% - 15px)">
-              <el-image :src="url" :fit="fit"></el-image>
-            </div>
-            <div class="img-item" style="width:calc(33.3% - 15px)">
-              <el-image :src="url" :fit="fit"></el-image>
-            </div>
-            <div class="img-item" style="width:calc(33.3% - 15px)">
-              <el-image :src="url" :fit="fit"></el-image>
-            </div>
-          </div>
-        </div>
+        <img class="news-banner" src="../assets/news-banner.png" alt="">
       </a>
     </div>
     <div class="section">
@@ -138,6 +115,10 @@ export default {
     justify-content: space-between;
     height: 512px;
     cursor: pointer;
+    .news-banner {
+      width: 100%;
+      height: 100%;
+    }
     @media screen and (max-width: 768px) {
       height: 270px;
     }
@@ -171,6 +152,7 @@ export default {
       .section-title {
         position: relative;
         cursor: pointer;
+        font-weight: bold !important;
 
         .section-more {
           position: absolute;
@@ -186,14 +168,17 @@ export default {
 
       h1 {
         color: #ffffff;
+        font-weight: bold !important;
+        font-size: 21px !important;
       }
 
       .sub-title {
+        font-weight: bold !important;
         background-image: -webkit-linear-gradient(left,
         #f68100,
         #ca3372,
         #0089e1);
-        font-size: 30px;
+        font-size: 16px !important;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }

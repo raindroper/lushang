@@ -9,31 +9,30 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-    meta: { title: '首页 - 鲁商大会' }
+    meta: { title: '首页' }
   },
   {
     path: '/news',
     name: 'News',
-    meta: { title: '新闻中心 - 鲁商大会' },
+    meta: { title: '新闻中心' },
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/News.vue')
+    component: () => import('../views/News.vue')
   },
   {
     path: '/meeting',
     name: 'Meeting',
-    meta: { title: '走进大会 - 鲁商大会' },
+    meta: { title: '走进大会' },
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Meeting.vue')
+    component: () => import('../views/Meeting.vue')
   }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+  base: '/2009-qnqyj/home/',
   routes
 })
 

@@ -5,14 +5,18 @@
         <img src="../assets/logo.png" style="width:80px"/>
       </div>
       <div class="right-menu">
-        <a href="/" class="menu-item" :class="[pathName=='/'?'menu-item-selected':'']">首页</a>
-        <a href="/news" class="menu-item" :class="[pathName=='/news'?'menu-item-selected':'']">新闻中心</a>
-        <a
-          href="/meeting"
+        <router-link :to="{name: 'Home'}" class="menu-item" :class="[pathName=='/'?'menu-item-selected':'']">首页
+        </router-link>
+        <router-link :to="{name: 'News'}" class="menu-item"
+                     :class="[pathName=='/news'?'menu-item-selected':'']">新闻中心
+        </router-link>
+        <router-link
+          :to="{name: 'Meeting'}"
           class="menu-item"
           :class="[pathName=='/meeting'?'menu-item-selected':'']"
-        >走进大会</a>
-        <a href="#" class="blue-btn">立即报名</a>
+        >走进大会
+        </router-link>
+        <a href="http://rl.jkfxpt.com/mt/qingnian" target="_blank" class="blue-btn">立即报名</a>
       </div>
     </div>
 
@@ -26,19 +30,19 @@
 
       <el-drawer title="菜单导航" :visible.sync="drawer" :with-header="false" size="100%">
         <div class="menu-item">
-          <a href="/">首 页</a>
+          <router-link :to="{name: 'Home'}">首 页</router-link>
           <div class="menu_close-btn" @click="closeNav()" style="cursor: pointer;">
             <img src="../assets/close.png" alt="" srcset="" width="15px"/>
           </div>
         </div>
         <div class="menu-item">
-          <a href="/news">新闻中心</a>
+          <router-link :to="{name: 'News'}">新闻中心</router-link>
         </div>
         <div class="menu-item">
-          <a href="/meeting">走进大会</a>
+          <router-link :to="{name: 'Meeting'}">走进大会</router-link>
         </div>
         <div class="menu-item">
-          <a href="#">立即报名</a>
+          <a href="http://rl.jkfxpt.com/mt/qingnian" target="_blank">立即报名</a>
         </div>
       </el-drawer>
     </div>
@@ -153,12 +157,14 @@ export default {
           border-bottom: 1px solid #1d1d1d;
           position: relative;
           height: 60px;
+
           .menu_close-btn {
             position: absolute;
             right: 20px;
             top: 50%;
             transform: translateY(-50%);
           }
+
           a {
             line-height: 60px;
             font-size: 16px;

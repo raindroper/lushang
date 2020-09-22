@@ -312,18 +312,22 @@ export default {
 
             .section-title {
                 margin-bottom: 30px;
+                font-weight: bold !important;
             }
 
             h1 {
                 color: #ffffff;
+                font-weight: bold !important;
+                font-size: 21px !important;
             }
 
             .sub-title {
+                font-weight: bold !important;
                 background-image: -webkit-linear-gradient(left,
                 #f68100,
                 #ca3372,
                 #0089e1);
-                font-size: 30px;
+                font-size: 16px !important;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
@@ -358,6 +362,7 @@ export default {
             .topic-title {
                 margin: 0;
                 color: #ffffff;
+                font-weight: bold !important;
             }
 
             background-image: linear-gradient(90deg,
