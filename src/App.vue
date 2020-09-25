@@ -16,7 +16,7 @@
 html, body {
   padding:0;
   margin: 0;
-  background:#020226 !important;
+  /*background:#020226 !important;*/
   * {
     outline: none;
   }

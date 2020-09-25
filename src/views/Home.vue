@@ -5,59 +5,59 @@
     <div class="top-banner">
       <img :src="bannerImg" width="100%"/>
     </div>
-
-    <div class="section">
-      <div class="section-title">
-        <h1>新闻头条</h1>
-        <span class="sub-title">NEWS HEADLINES</span>
+    <div class="home-bg">
+      <div class="section">
+        <div class="section-title">
+          <h1>新闻头条</h1>
+          <span class="sub-title">NEWS HEADLINES</span>
+        </div>
+        <div>
+          <template v-if="isMobile">
+            <carousel :dots="false" :autoplay="true">
+              <div class="carousel-item" v-for="item in items" :key="item.index">
+                <img style="width: 100%;height: 198px;" :src="item.image" alt="">
+                <div class="carousel-footer">
+                  <span class="footer-index">{{item.index}}</span>
+                  <span class="footer-title">精准把握个性需求引领时代</span>
+                </div>
+              </div>
+            </carousel>
+          </template>
+          <template v-else>
+            <accordion :items="items" style="margin-bottom: 30px;"/>
+          </template>
+          <!--        <template v-if="isMobile">-->
+          <!--          <el-carousel indicator-position="none" :interval="4000" arrow="always" height="200px"-->
+          <!--                       style="margin-bottom: 30px;">-->
+          <!--            <el-carousel-item v-for="item in items" :key="item">-->
+          <!--              <div>-->
+          <!--                <img :src="item.image" alt="" style="width: 100%;height: 100%;">-->
+          <!--              </div>-->
+          <!--            </el-carousel-item>-->
+          <!--          </el-carousel>-->
+          <!--        </template>-->
+          <!--        <template v-else>-->
+          <!--          <accordion :items="items" style="margin-bottom: 30px;"/>-->
+          <!--        </template>-->
+        </div>
       </div>
-      <div>
-        <template v-if="isMobile">
-          <carousel :dots="false" :autoplay="true">
-            <div class="carousel-item" v-for="item in items" :key="item.index">
-              <img style="width: 100%;height: 198px;" :src="item.image" alt="">
-              <div class="carousel-footer">
-                <span class="footer-index">{{item.index}}</span>
-                <span class="footer-title">精准把握个性需求引领时代</span>
+      <div class="section">
+        <div class="section-title">
+          <h1>嘉宾风采</h1>
+          <span class="sub-title">CONFERENCE SPEAKERS</span>
+        </div>
+      </div>
+      <div class="section-1300">
+        <el-carousel :interval="5000" arrow="always">
+          <el-carousel-item v-for="(item,index1) in guestData" :key="index1">
+            <div class="person-wrap">
+              <div class="person-item" v-for="(subItem,index) in item.info" :key="index">
+                <img :src="subItem.img" width="100%"/>
               </div>
             </div>
-          </carousel>
-        </template>
-        <template v-else>
-          <accordion :items="items" style="margin-bottom: 30px;"/>
-        </template>
-        <!--        <template v-if="isMobile">-->
-        <!--          <el-carousel indicator-position="none" :interval="4000" arrow="always" height="200px"-->
-        <!--                       style="margin-bottom: 30px;">-->
-        <!--            <el-carousel-item v-for="item in items" :key="item">-->
-        <!--              <div>-->
-        <!--                <img :src="item.image" alt="" style="width: 100%;height: 100%;">-->
-        <!--              </div>-->
-        <!--            </el-carousel-item>-->
-        <!--          </el-carousel>-->
-        <!--        </template>-->
-        <!--        <template v-else>-->
-        <!--          <accordion :items="items" style="margin-bottom: 30px;"/>-->
-        <!--        </template>-->
+          </el-carousel-item>
+        </el-carousel>
       </div>
-    </div>
-
-    <div class="section">
-      <div class="section-title">
-        <h1>嘉宾风采</h1>
-        <span class="sub-title">CONFERENCE SPEAKERS</span>
-      </div>
-    </div>
-    <div class="section-1300">
-      <el-carousel :interval="5000" arrow="always">
-        <el-carousel-item v-for="(item,index1) in guestData" :key="index1">
-          <div class="person-wrap">
-            <div class="person-item" v-for="(subItem,index) in item.info" :key="index">
-              <img :src="subItem.img" width="100%"/>
-            </div>
-          </div>
-        </el-carousel-item>
-      </el-carousel>
     </div>
   </div>
 </template>
@@ -202,7 +202,20 @@ export default {
       max-width: 1200px;
     }
 
-    padding-bottom: 150px;
+    .home-bg {
+      width: 100%;
+      padding-top: 1px;
+      background-repeat: repeat-y;
+      background-size: 100%;
+      padding-bottom: 150px;
+      @media screen and (min-width: 768px) {
+        background-image: url('../assets/pc_背景.jpg');
+      }
+      @media screen and (max-width: 768px) {
+        background-image: url('../assets/移动背景.jpg');
+      }
+    }
+
 
     .section {
       text-align: left;
@@ -213,7 +226,7 @@ export default {
       padding: 0 50px;
 
       h1 {
-        color: #ffffff;
+        color: #3A3A3A;
         font-weight: bold !important;
         font-size: 21px !important;
       }
@@ -249,7 +262,7 @@ export default {
 
       .el-carousel__arrow {
         background-color: rgb(255 255 255 / 1%);
-        font-size: 40px;
+        font-size: 20px;
       }
 
       .el-carousel__indicators--horizontal {

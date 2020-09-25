@@ -77,7 +77,7 @@ export default {
   .Nav {
     width: 100%;
     height: 70px;
-    background: #000000;
+    background: rgb(208, 218, 233);
 
     .pc-header {
       display: flex;

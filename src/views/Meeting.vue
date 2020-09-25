@@ -269,16 +269,17 @@ export default {
 
 <style lang="less">
     .meeting {
+        background:#020226 !important;
         .section-wrapper {
             &.activity {
                 padding-top: 1px;
-                background-image: url('/images/meeting-bg2-m.jpg');
+                background-image: url('../assets/meeting-bg2-m.jpg');
                 -webkit-background-size: 100% 100%;
                 background-size: 100% 100%;
                 background-position: center center;
                 @media screen and (min-width: 768px) {
                     padding-top: 20px;
-                    background-image: url('/images/meeting-bg2.jpg');
+                    background-image: url('../assets/meeting-bg2.jpg');
                     -webkit-background-size: 100% 100%;
                     background-size: 100% 100%;
                     background-position: center center;
@@ -287,14 +288,14 @@ export default {
             }
             &.intro {
                 padding: 1px 0 10px;
-                background-image: url('/images/meeting-bg.png');
+                background-image: url('../assets/meeting-bg.png');
                 -webkit-background-size: 100% 100%;
                 background-size: 100% 100%;
                 background-position: center center;
                 background-repeat: no-repeat;
                 @media screen and (min-width: 768px) {
                     padding: 30px 0 70px;
-                    background-image: url('/images/meeting-bg.png');
+                    background-image: url('../assets/meeting-bg.png');
                     -webkit-background-size: 100% 100%;
                     background-size: 100% 100%;
                     background-position: center center;

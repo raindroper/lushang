@@ -140,6 +140,7 @@ export default {
 
   .news {
     margin-bottom: 100px;
+    background:#020226 !important;
 
     .section {
       text-align: left;
