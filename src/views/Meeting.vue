@@ -27,62 +27,82 @@
             </div>
             <div>
                 <div class="topic">
-                    <h2 class="topic-title">大会总论坛</h2>
-                    <span v-if="!isMobile">8:30-12:15</span>
+                    <h2 class="topic-title">开幕式</h2>
+                    <span v-if="!isMobile">9:00-12:00</span>
                 </div>
                 <div class="topic-content">
+                    <h2 class="topic-sub-title">
+                        09:00-10:30 第一阶段
+                    </h2>
                     <div class="content-item" v-for="(item, index) in list1" :key="index">
                         <div class="item-time">{{item.time}}</div>
                         <i class="item-divider"></i>
                         <div class="item-content">{{item.content}}</div>
+                    </div>
+                    <h2 class="topic-sub-title">
+                        09:00-10:30 茶歇
+                    </h2>
+                    <h2 class="topic-sub-title">
+                        09:00-10:30 第二阶段
+                    </h2>
+                    <div class="content-item">
+                        <div class="item-time"></div>
+                        <i class="item-divider"></i>
+                        <div class="item-content">知名经济学家、商界领军人物、国外知名人士主旨 演讲</div>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="topic">
                     <h2 class="topic-title">大会分论坛</h2>
-                    <span v-if="!isMobile">14:00-17:30</span>
+                    <span v-if="!isMobile">14:00-17:00</span>
                 </div>
                 <div class="topic-desc">
-                    文化旅游及城乡融合与城市更新创新发展论坛
+                    城市更新产业创新发展论坛
                 </div>
-                <div class="topic-content">
-                    <div class="content-item" v-for="(item, index) in list2" :key="index">
-                        <div class="item-time">{{item.time}}</div>
-                        <i class="item-divider"></i>
-                        <div class="item-content">{{item.content}}</div>
-                    </div>
+                <div class="topic-desc">
+                    医养健康及生物医疗产业创新发展论坛
                 </div>
+                <div class="topic-desc">
+                    城乡融合产业创新发展论坛
+                </div>
+                <!--<div class="topic-content">-->
+                    <!--<div class="content-item" v-for="(item, index) in list2" :key="index">-->
+                        <!--<div class="item-time">{{item.time}}</div>-->
+                        <!--<i class="item-divider"></i>-->
+                        <!--<div class="item-content">{{item.content}}</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div class="topic-desc">
+                    文化旅游产业创新发展论坛
+                </div>
+                <!--<div class="topic-content">-->
+                    <!--<div class="content-item" v-for="(item, index) in list3" :key="index">-->
+                        <!--<div class="item-time">{{item.time}}</div>-->
+                        <!--<i class="item-divider"></i>-->
+                        <!--<div class="item-content">{{item.content}}</div>-->
+                    <!--</div>-->
+                <!--</div>-->
                 <div class="topic-desc">
                     新一代信息技术及现代金融服务产业创新发展论坛
                 </div>
-                <div class="topic-content">
-                    <div class="content-item" v-for="(item, index) in list3" :key="index">
-                        <div class="item-time">{{item.time}}</div>
-                        <i class="item-divider"></i>
-                        <div class="item-content">{{item.content}}</div>
-                    </div>
-                </div>
-                <div class="topic-desc">
-                    现代高效农业及医养健康产业创新发展论坛
-                </div>
-                <div class="topic-content">
-                    <div class="content-item" v-for="(item, index) in list3" :key="index">
-                        <div class="item-time">{{item.time}}</div>
-                        <i class="item-divider"></i>
-                        <div class="item-content">{{item.content}}</div>
-                    </div>
-                </div>
+                <!--<div class="topic-content">-->
+                    <!--<div class="content-item" v-for="(item, index) in list3" :key="index">-->
+                        <!--<div class="item-time">{{item.time}}</div>-->
+                        <!--<i class="item-divider"></i>-->
+                        <!--<div class="item-content">{{item.content}}</div>-->
+                    <!--</div>-->
+                <!--</div>-->
             </div>
-            <div>
-                <div class="topic">
-                    <h2 class="topic-title">企业家沙龙</h2>
-                    <span v-if="!isMobile">18:00-21:30</span>
-                </div>
-                <div class="topic-desc" v-if="isMobile">
-                    18:00-21:30
-                </div>
-            </div>
+            <!--<div>-->
+                <!--<div class="topic">-->
+                    <!--<h2 class="topic-title">企业家沙龙</h2>-->
+                    <!--<span v-if="!isMobile">18:00-21:30</span>-->
+                <!--</div>-->
+                <!--<div class="topic-desc" v-if="isMobile">-->
+                    <!--18:00-21:30-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
         <div class="section-wrapper activity">
             <div class="section">
@@ -109,53 +129,41 @@ import Header from '@/components/Header.vue';
 
 const list1 = [
   {
-    time: '08:30-09:40',
-    content: '大会主旨演讲',
+    // time: '08:30-09:40',
+    content: '主持人开场（李颖，CCTV 证券资讯频道主持人）',
   },
   {
-    time: '09:40-09:50',
-    content: '“产业创新联盟”启动仪式',
+    // time: '09:40-09:50',
+    content: '省领导致辞',
   },
   {
-    time: '09:50-10:00',
-    content: '《产业创新大会山东省产业园区地图》发布',
+    // time: '09:50-10:00',
+    content: '中房集团理事长、中国企业家联合会执行副会长孟晓苏致辞',
   },
   {
-    time: '10:10-10:20',
-    content: '鲁商“智学、智汇、智造、智能、智享”五智系列产业园区发布',
+    // time: '10:10-10:20',
+    content: '山东省商业集团有限公司党委书记、董事长高洪雷专题推介',
   },
   {
-    time: '10:20-10:40',
-    content: '鲁商集团首批“五智”十强产业园区发布',
+    // time: '10:20-10:40',
+    content: '发布“产业创新大会”宣言',
   },
   {
-    time: '10:40-11:00',
-    content: '青年企业家创新发展国际峰会产业园区联盟产业园区发布',
+    // time: '10:40-11:00',
+    content: '发布“智学、智汇、智造、智能、智享”五智系列产业园区',
   },
   {
-    time: '11:00-11:25',
-    content: '创新产业园区合作项目签约仪式',
+    // time: '11:00-11:25',
+    content: '项目签约仪式',
   },
   {
-    time: '11:25-11:35',
-    content: '创新产业园区资本联盟签约仪式',
+    // time: '11:25-11:35',
+    content: '产业园区资本联合会、媒体联合会、促进产业消费扶贫联合会成立仪式',
   },
   {
-    time: '11:35-11:45',
-    content: '创新产业园区媒体联盟签约仪式',
-  },
-  {
-    time: '11:45-11:55',
-    content: '促进产业消费扶贫联盟签约仪式',
-  },
-  {
-    time: '11:55-12:05',
-    content: '山东省十强产业国家课题组签约仪式',
-  },
-  {
-    time: '12:05-12:15',
-    content: '国家实体经济研究院山东分院成立仪式',
-  },
+    // time: '11:35-11:45',
+    content: '山东省十强产业国家课题组成立仪式',
+  }
 ];
 const list2 = [
   {
@@ -372,6 +380,11 @@ export default {
 
         }
         .topic-content {
+            .topic-sub-title {
+                color: rgb(249, 125, 0);
+                font-size: 18px;
+                margin-bottom: 24px;
+            }
             .content-item {
                 display: flex;
                 justify-content: flex-start;

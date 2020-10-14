@@ -32,7 +32,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  base: '/2009-qnqyj/home/',
+  base: '/cycxdh/',
   routes
 })
 

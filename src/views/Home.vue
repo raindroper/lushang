@@ -138,32 +138,32 @@ export default {
         {
           info: [
             {
-              img: require('../assets/guest.png'),
+              img: require('../assets/嘉宾1.png'),
             },
             {
-              img: require('../assets/guest.png'),
+              img: require('../assets/嘉宾2.png'),
             },
             {
-              img: require('../assets/guest.png'),
+              img: require('../assets/嘉宾3.png'),
             },
             {
-              img: require('../assets/guest.png'),
+              img: require('../assets/嘉宾4.png'),
             },
             {
-              img: require('../assets/guest.png'),
+              img: require('../assets/嘉宾5.png'),
             },
           ],
         },
-        {
-          info: [
-            {
-              img: require('../assets/guest.png'),
-            },
-            {
-              img: require('../assets/guest.png'),
-            },
-          ],
-        },
+        // {
+        //   info: [
+        //     {
+        //       img: require('../assets/guest.png'),
+        //     },
+        //     {
+        //       img: require('../assets/guest.png'),
+        //     },
+        //   ],
+        // },
       ]
     } else {
       this.bannerImg = require('../assets/banner2.png')

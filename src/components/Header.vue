@@ -7,6 +7,8 @@
       <div class="right-menu">
         <router-link :to="{name: 'Home'}" class="menu-item" :class="[pathName=='/'?'menu-item-selected':'']">首页
         </router-link>
+        <a href="javascript:" class="menu-item">会议直播
+        </a>
         <router-link :to="{name: 'News'}" class="menu-item"
                      :class="[pathName=='/news'?'menu-item-selected':'']">新闻中心
         </router-link>
