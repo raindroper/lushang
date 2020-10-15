@@ -17,7 +17,7 @@
       <div class="section-title">
         <h1>图片新闻</h1>
         <span class="sub-title">CONFERENCE SPEAKERS</span>
-        <a href="javascript:" class="section-more">更多 ></a>
+        <router-link to="/news/list" class="section-more">更多 ></router-link>
       </div>
       <div class="news-wrap">
         <div class="img-news-item" v-for="(item,index) in newsData" :key="index">

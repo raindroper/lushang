@@ -37,8 +37,10 @@
             <img src="../assets/close.png" alt="" srcset="" width="15px"/>
           </div>
         </div>
-        <a href="javascript:" class="menu-item">会议直播
-        </a>
+        <div class="menu-item">
+          <a href="javascript:">会议直播
+          </a>
+        </div>
         <div class="menu-item">
           <router-link :to="{name: 'News'}">新闻中心</router-link>
         </div>

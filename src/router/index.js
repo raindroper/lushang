@@ -28,6 +28,24 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import('../views/Meeting.vue')
+  },
+  {
+    path: '/news/list',
+    name: 'NewsList',
+    meta: { title: '新闻中心' },
+    component: () => import('../views/NewsList.vue')
+  },
+  {
+    path: '/news/detail',
+    name: 'NewsDetail',
+    meta: { title: '新闻中心' },
+    component: () => import('../views/NewsDetail')
+  },
+  {
+    path: '/guest',
+    name: 'Guest',
+    meta: { title: '嘉宾风采' },
+    component: () => import('../views/Guest')
   }
 ]
 
