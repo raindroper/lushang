@@ -27,6 +27,7 @@
 
 <script>
 import Header from '@/components/Header.vue'
+import GuestInfo from '../source/guest'
 
 const guestInfo = {
   pic: require('../assets/嘉宾1.png'),
@@ -78,31 +79,40 @@ export default {
     padding-top: 1px;
     width: 100%;
     height: 100%;
-    min-height: 1200px;
+    min-height: 800px;
     background-color: #ffffff;
     .guest-title {
-      color: rgb(242, 163, 115);
+      color: rgb(242, 135, 94);
       font-size: 28px;
       font-weight: bold;
       text-align: center;
       margin-bottom: 36px;
     }
     .guest-pic {
-      width: 280px;
+      width: 240px;
       text-align: center;
-      margin: 0 auto;
+      margin: 0 auto 36px;
       img {
         width: 100%;
       }
     }
     .guest-name {
+      font-size: 16px;
       text-align: center;
+      font-weight: bold;
+      margin-bottom: 4px;
     }
     .guest-name-title {
       text-align: center;
+      font-size: 12px;
+      .title-item {
+        margin-bottom: 4px;
+      }
     }
     .guest-desc {
+      font-size: 12px;
       line-height: 2;
+      margin-top: 40px;
     }
   }
 </style>

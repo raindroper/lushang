@@ -40,10 +40,10 @@
                         <div class="item-content">{{item.content}}</div>
                     </div>
                     <h2 class="topic-sub-title">
-                        09:00-10:30 茶歇
+                        10:30-10:40 茶歇
                     </h2>
                     <h2 class="topic-sub-title">
-                        09:00-10:30 第二阶段
+                        10:40-12:00 第二阶段
                     </h2>
                     <div class="content-item">
                         <div class="item-time"></div>
